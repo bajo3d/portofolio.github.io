@@ -41,6 +41,9 @@
               <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -54,7 +57,7 @@
       <div class="container ilign-items-center justify-content-center p-5">
         <img src="img/logo.jpg" alt="Etho Suhardi" width="200px" class="rounded-circle img-thumbnail" />
         <h1 class="display-4">Etho Suhardi</h1>
-        <p class="lead">Web Design | Teacher</p>
+        <p class="lead"></p>
       </div>
     </section>
     <!-- Akhir Jumbotron -->
@@ -249,11 +252,33 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
       AOS.init({
         once: true,
       });
     </script>
 
+    <!-- GSAP Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- GSAP Animasi Text -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+
+    <!-- Script GSAP tambahan agar gambar pada class jumbotron memiliki animasi -->
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 1.5, delay: 1.5, text: "Web Design | Teacher" });
+      gsap.from(".jumbotron img", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+
+    <!-- Script Contact Form -->
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycby79u88Cc8fQD3ly2UjQ-X16cCxXqgUb50-LSRc2ZcXBAOzYQkmU51bW_J-VaTdSENv/exec";
       const form = document.forms["contact-form-saya"];
