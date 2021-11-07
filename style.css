@@ -5,14 +5,17 @@ body {
 .jumbotron {
   padding-top: 8rem;
   padding-bottom: 5rem;
-  background-color: #92c6f7;
-}
+  background-image: url(img/jumbotron.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 
-#portofolio {
-  background-color: #92c6f7;
-}
 
-.card-img-top {
+
+.gallery-img {
   width: 100%;
-  height: 250px;
+}
+
+#gallery .row > * {
+  padding: 0;
 }
