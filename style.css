@@ -5,15 +5,11 @@ body {
 .jumbotron {
   padding-top: 8rem;
   padding-bottom: 5rem;
-  background-image: url(img/mobil.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: white;
+  background-color: #92c6f7;
 }
 
-#produk {
-  background-color: #dc3545;
+#portofolio {
+  background-color: #92c6f7;
 }
 
 .card-img-top {
