@@ -23,3 +23,11 @@ body {
 #gallery .row > * {
   padding: 0;
 }
+
+#gallery {
+  background-image: url(img/jumbotron.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
