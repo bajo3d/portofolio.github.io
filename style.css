@@ -2,6 +2,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+#navbarNav > ul > li:nth-child(n) > a:hover {
+  color: #00bf85;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: #00bf85;
+}
+
 .jumbotron {
   padding-top: 8rem;
   padding-bottom: 5rem;
